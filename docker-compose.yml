@@ -1,0 +1,15 @@
+mqtt:
+  image: fstehle/rpi-mosquitto
+  restart: always
+  volumes:
+    - '/home/pirate/mqtt-data/config:/mqtt/config'
+    - '/home/pirate/mqtt-data/data:/mqtt/data'
+    - '/home/pirate/mqtt-data/log:/mqtt/log'
+  expose:
+    - 1883
+    - 9001
+  ports:
+    - '1883:1883'
+    - '9001:9001'
+
+
